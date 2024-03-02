@@ -8,43 +8,43 @@ Windows WPF app to run and configure a tarpit service with logging.
 
 ### Options
 **View options** 
-- Max connection entries
+- Max connection entries  
 Maximum connections to display
-- Max log entries
+- Max log entries  
 Maximum app log entries to display
 
 **Tarpit options**
-- Listen address
+- Listen address  
 Listeners address, ipv4 or ipv6
-- Ports
+- Ports  
 Ports specification, can be a range like 10-99 or individual ports, or both seperated by comma
-- UseIPv4Only
+- UseIPv4Only  
 Enable to use ipv4 only
-- Write interval
+- Write interval  
 Interval in milliseconds to write the specified (write size) amount of bytes
-- Write size
+- Write size  
 Amount of bytes to write per write interval
-- Update interval
+- Update interval  
 Interval in seconds to receive connection updates
-- Connection timeout
+- Connection timeout  
 Timeout in seconds at which the connection is aborted
-- Response file
+- Response file  
 Relative or full path to file which contains response data
-- Response text
+- Response text  
 Response as plain text
 
 **Connection log options**
-- Enabled
+- Enabled  
 Enable or disable connection logging
-- Dateformat
+- Dateformat  
 Dateformat to use to format connection created date (yyyy-MM-ddTHH:mm:ss)
-- Value delimiter
+- Value delimiter  
 Delimiter char to seperate the values
-- Directory path
+- Directory path  
 Relative or full path to a log storage directory
-- Filename prefix
+- Filename prefix  
 Optional log file name prefix
-- Filename date format
+- Filename date format  
 Filename suffix date format to store log lines per day (yyyyMMdd) or month (yyyyMM), etc
 
 **Log file header**
