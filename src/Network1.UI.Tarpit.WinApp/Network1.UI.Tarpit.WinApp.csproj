@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+
+		<Title>$(AssemblyName)</Title>
+		<Authors>2code</Authors>
+		<PackageProjectUrl>https://github.com/2code-it/Network1.UI.Tarpit</PackageProjectUrl>
+		<PackageTags>tarpit win app</PackageTags>
+		<RepositoryUrl>https://github.com/2code-it/Network1.UI.Tarpit.git</RepositoryUrl>
+		<Description>Windows wpf app for configuring and running a tarpit service</Description>
+		<PackageLicenseExpression>BSD-2-Clause</PackageLicenseExpression>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Network1.UI.Tarpit.Core\Network1.UI.Tarpit.Core.csproj" />
+	</ItemGroup>
+
+</Project>

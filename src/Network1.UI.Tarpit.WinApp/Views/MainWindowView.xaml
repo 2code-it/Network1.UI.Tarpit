@@ -1,0 +1,36 @@
+﻿<Window x:Class="Network1.UI.Tarpit.WinApp.Views.MainWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Network1.UI.Tarpit.WinApp"
+		xmlns:v="clr-namespace:Network1.UI.Tarpit.WinApp.Views"
+        mc:Ignorable="d"
+        Title="TcpTarpit" Height="450" Width="800"
+		DataContext="{Binding [MainWindowViewModel], Source={StaticResource viewModelLocator}}"
+		>
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="26" />
+			<RowDefinition Height="3*" />
+			<RowDefinition Height="4" />
+			<RowDefinition Height="1*" />
+		</Grid.RowDefinitions>
+
+		<Menu Grid.Row="0" Padding="2">
+			<MenuItem Header="File">
+				<MenuItem Header="{Binding ToggleServiceCaption}" Command="{Binding ToggleServiceCommand}" />
+				<MenuItem Header="Options" Command="{Binding ShowOptionsCommand}" />
+				<Separator />
+				<MenuItem Header="Exit" Command="{Binding ExitCommand}"/>
+			</MenuItem>
+		</Menu>
+		
+		<v:ConnectionsView Grid.Row="1" />
+		<GridSplitter Grid.Row="2" ResizeDirection="Rows" Height="4" HorizontalAlignment="Stretch" ResizeBehavior="PreviousAndNext" />
+		<v:AppLogView Grid.Row="3" />
+
+		<v:OptionsView Panel.ZIndex="1" Grid.RowSpan="4" d:Visibility="Collapsed" />
+	</Grid>
+	
+</Window>

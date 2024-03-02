@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<Title>$(AssemblyName)</Title>
+		<Authors>2code</Authors>
+		<RepositoryUrl>https://github.com/2code-it/Network1.UI.Tarpit.git</RepositoryUrl>
+		<Description>Tarpit UI core elements</Description>
+		<PackageLicenseExpression>BSD-2-Clause</PackageLicenseExpression>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="Code2.Net.TcpTarpit" Version="0.1.28" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="AppOptions.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>

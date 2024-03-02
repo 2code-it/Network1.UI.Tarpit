@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Network1.UI.Tarpit.WinApp.Views.AppLogView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Network1.UI.Tarpit.WinApp.Views"
+             mc:Ignorable="d" 
+			 DataContext="{Binding [AppLogViewModel], Source={StaticResource viewModelLocator}}"
+             d:DesignHeight="450" d:DesignWidth="800">
+	<UserControl.Resources>
+		<ResourceDictionary Source="../Resources/Style1.xaml" />
+	</UserControl.Resources>
+	<DataGrid Grid.Row="3" Grid.ColumnSpan="3" ItemsSource="{Binding Entries}" CanUserAddRows="False" IsReadOnly="True"
+				CanUserDeleteRows="False" AutoGenerateColumns="False" SelectionMode="Single" 
+				CellStyle="{StaticResource dataGridCellLogSeverity}"
+			>
+		<DataGrid.Columns>
+			<DataGridTextColumn Header="created" Width="60" Binding="{Binding Created, StringFormat='HH:mm:ss'}" />
+			<DataGridTextColumn Header="severity" Width="60" Binding="{Binding Severity}" CanUserSort="False" />
+			<DataGridTextColumn Header="message" Width="*" Binding="{Binding Message}" CanUserSort="False" />
+		</DataGrid.Columns>
+	</DataGrid>
+</UserControl>

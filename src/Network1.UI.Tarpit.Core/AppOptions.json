@@ -1,0 +1,25 @@
+﻿{
+	"ViewOptions": {
+		"MaxConnectionEntries": 250,
+		"MaxAppLogEntries": 100
+	},
+	"ConnectionLogOptions": {
+		"IsEnabled": true,
+		"LogDateFormat": "yyyy-MM-ddTHH:mm:ss",
+		"LogValueDelimiter": "\t",
+		"DirectoryPath": "./logs",
+		"FileNamePrefix": null,
+		"FileNameSuffixDateFormat": "yyyyMMdd"
+	},
+	"TarpitOptions": {
+		"ListenAddress": "127.0.0.1",
+		"Ports": "2000-2200",
+		"UseIPv4Only": true,
+		"WriteIntervalInMs": 200,
+		"WriteSize": 2,
+		"UpdateIntervalInSeconds": 5,
+		"TimeoutInSeconds": 1500,
+		"ResponseFile": null,
+		"ResponseText": "HTTP/1.1 200 OK\r\nServer: nginx\r\nContent-Type: text/plain; charset=utf-8\r\nConnection: keep-alive\r\n\r\n0123456789"
+	}
+}
